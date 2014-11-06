@@ -1,4 +1,4 @@
-<nav class="navbar navbar-inverse navbar-fixed-bottom opacidad" role="navigation">
+<nav class="navbar navbar-inverse navbar-fixed-bottom myFooter opacidad" role="navigation">
   <div class="container">
   	<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">

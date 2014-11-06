@@ -1,7 +1,7 @@
 // listin.js
-///window.onload=function(){ // para que 1ºcargue la página y después pinte los users
-//readUsers(); // 1º cargo los users que estén guardados en la bbdd
-///};
+//window.onload=function(){ 
+//};
+
 
 function borraUser(userID){
 	$.post("http://localhost/listinMVC/controllers/deleteUser_controller.php", {userID: userID}, function(data,status){//(URL,data,callback)
@@ -15,6 +15,13 @@ function borraNum(phoneID,userID){
 	});
 }
 
+//function nextPag(){
+//	var pagActual = pagActual + 1;
+//}
+
+//function prevPag(){
+//	var pagActual = pagActual - 1;
+//}
 ///function dameUsers(){
 ///	var users;
 ///	users <= recibo x ajax un array de users

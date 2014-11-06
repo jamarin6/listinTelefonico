@@ -5,13 +5,18 @@
 	// function index() {
 	include "../conectarBD.php";
 	$view = "users/index.php";
-	//$mens = $_GET['mens'];
-	//if (empty($_GET['mens'])) {
-  //  $mens = '';
-  //  $color = '';
-	//}
+	
+	if (isset($_GET['pagIr'])){
+		$pagActual = $_GET['pagIr'];
+	} else {
+		$pagActual = 0;
+	}
+//seleccionar solo en nº de filas q queremos xa esa pag
+	//$result = mysqli_query($con,"SELECT id, nombre, ap1, ap2, fechaNac, padre_id FROM users inicio=$pagActual*3 limit=3");
+	$inicio = $pagActual * 3;
+	$result = mysqli_query($con,"SELECT id, nombre, ap1, ap2, fechaNac, padre_id FROM users ORDER BY nombre LIMIT $inicio,3");
 
-	$result = mysqli_query($con,"SELECT id, nombre, ap1, ap2, fechaNac, padre_id FROM users");
+	//$result = mysqli_query($con,"SELECT id, nombre, ap1, ap2, fechaNac, padre_id FROM users ");
 	$arrayUsers = []; // inicializo el array
   //guardamos en un array multidimensional todos los datos de la consulta
   $i=0;

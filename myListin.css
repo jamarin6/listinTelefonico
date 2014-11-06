@@ -58,3 +58,15 @@ body {
 .text-centered {
   text-align: center;
 }
+
+.myHeader {
+  border-bottom-color: #246B24;
+  border-bottom-width: 4px;
+  border-radius: 0px 0px 60px 60px;
+}
+
+.myFooter {
+  border-top-color: #246B24;
+  border-top-width: 4px;
+  border-radius: 60px 60px 0px 0px;
+}

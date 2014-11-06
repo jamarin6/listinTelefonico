@@ -20,6 +20,7 @@
 			  		echo "<th>Navegation</th>";
 		  		echo "<tr>";
 		  		// TABLA, itero y creo una fila por cada usuario con su nombre y apellidos + botones navegacion
+			  	//pintar 3 filas por cada página
 			  $arrlength=count($arrayUsers);
 			  for ($j=0; $j<$arrlength; $j++) {
 			  	$userID = $arrayUsers[$j]['id'];
@@ -27,7 +28,7 @@
 			  	$userAp1 = $arrayUsers[$j]['ap1'];
 			  	$userAp2 = $arrayUsers[$j]['ap2'];
 			  	$userFechaNac = $arrayUsers[$j]['fechaNac'];
-					echo "<tr id='row" . $userID . "'>"; // X X X X X X X X X X X X X X X X X X X   AQUÍ   X X X X X X X X X X X X X 
+					echo "<tr id='row" . $userID . "'>";
 						echo "<td>" . $arrayUsers[$j]['nombre'] . " " . $arrayUsers[$j]['ap1'] . " " . $arrayUsers[$j]['ap2'] . "&nbsp&nbsp&nbsp" . "</td>";  
 						echo "<td><a class='btn btn-primary btn-xs' href='../controllers/showUser_controller.php?userID=" . $userID . "'>View</a>" . " " .							       
 								      "<a class='btn btn-warning btn-xs' href='../controllers/editUser_controller.php?userID=" . $userID . "'>Edit</a>" . " " . 
@@ -44,12 +45,22 @@
 	</div><br>
 
 	<!-- 	BOTONES de paginación -->
+
+
 	<div class="row">
-		<div class="col-xs-4 col-xs-offset-1 col-sm-2 col-sm-offset-3 col-md-2 col-md-offset-3 col-lg-2 col-lg-offset-3 paginar">
-			<button type="button" class="btn btn-warning center-block" id="prevPag">&lt;&lt;&lt;PrevPag</button>
+		<div class="col-xs-4 col-xs-offset-1 col-sm-2 col-sm-offset-3 col-md-2 col-md-offset-3 col-lg-2 col-lg-offset-3">
+			<?php 
+				//echo "<a class='btn btn-warning center-block' id='prevPag' onclick='prevPag()'>&lt;&lt;&lt;PrevPag</a>";
+				echo "<a class='btn btn-warning center-block' href='../controllers/users_controller.php?pagIr=" . ($pagActual-1) . "'>&lt;&lt;&lt;PrevPag</a>";
+			?>
+			<!--<button type="button" class="btn btn-warning center-block" id="prevPag">&lt;&lt;&lt;PrevPag</button>-->
 		</div>
-		<div class="col-xs-4 col-xs-offset-2 col-sm-2 col-sm-offset-2 col-md-2 col-md-offset-2 col-lg-2 col-lg-offset-2 paginar2">
-			<button type="button" class="btn btn-warning center-block" id="nextPag">NextPag&gt;&gt;&gt;</button>
+		<div class="col-lg-2 centra"><?php echo "pag " . ($pagActual+1); ?></div>
+		<div class="col-lg-2">
+			<?php 
+				echo "<a class='btn btn-warning center-block' href='../controllers/users_controller.php?pagIr=" . ($pagActual+1) . "'>NextPag&gt;&gt;&gt;</a>";
+			?>
+			<!--<button type="button" class="btn btn-warning center-block" id="nextPag">NextPag&gt;&gt;&gt;</button>-->
 		</div>
 	</div><br>
 	
@@ -76,4 +87,26 @@
 			  	}
 			  }
 		echo "</li><br>";
+
+// TABLA, itero y creo una fila por cada usuario con su nombre y apellidos + botones navegacion
+			  	//pintar 3 filas por cada página
+			  $arrlength=count($arrayUsers);
+			  for ($j=0; $j<$arrlength; $j++) {
+			  	$userID = $arrayUsers[$j]['id'];
+			  	$userNombre = $arrayUsers[$j]['nombre'];
+			  	$userAp1 = $arrayUsers[$j]['ap1'];
+			  	$userAp2 = $arrayUsers[$j]['ap2'];
+			  	$userFechaNac = $arrayUsers[$j]['fechaNac'];
+					echo "<tr id='row" . $userID . "'>";
+						echo "<td>" . $arrayUsers[$j]['nombre'] . " " . $arrayUsers[$j]['ap1'] . " " . $arrayUsers[$j]['ap2'] . "&nbsp&nbsp&nbsp" . "</td>";  
+						echo "<td><a class='btn btn-primary btn-xs' href='../controllers/showUser_controller.php?userID=" . $userID . "'>View</a>" . " " .							       
+								      "<a class='btn btn-warning btn-xs' href='../controllers/editUser_controller.php?userID=" . $userID . "'>Edit</a>" . " " . 
+								      "<a class='btn btn-danger btn-xs' id='deleteUser' onclick='borraUser(" . $userID . ")'" . ">Delete</a>" . " " . 
+								      "<a class='btn btn-info btn-xs' href='../controllers/showUserList_controller.php?userID=" . $userID . "'>PhoneBook</a>" . " " . 
+								      "<a class='btn btn-success btn-xs' href='../controllers/newUser_controller.php?userID=" . $userID . "'>Add User</a></td>";
+		      echo "</tr>";
+			  }
+			  echo "</table>";
+			  // TABLA, fin /////////////////////////////////////////////////////////////////////////////////////////////
+
 -->
