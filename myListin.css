@@ -60,13 +60,13 @@ body {
 }
 
 .myHeader {
-  border-bottom-color: #246B24;
+  border-bottom-color: #2E9C53;
   border-bottom-width: 4px;
   border-radius: 0px 0px 60px 60px;
 }
 
 .myFooter {
-  border-top-color: #246B24;
+  border-top-color: #2E9C53;
   border-top-width: 4px;
   border-radius: 60px 60px 0px 0px;
 }

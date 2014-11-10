@@ -7,7 +7,15 @@
 	$view = "users/index.php";
 	
 	if (isset($_GET['pagIr'])){
+		//restricciones por si me manda a una pag fuera de rango//query para saber long de users
+		$count1 = mysqli_fetch_array(mysqli_query($con,"SELECT count(*) FROM users"))[0];
+		if (($_GET['pagIr'])<=0 || ($_GET['pagIr'])>=($count1)/3){//$count1/3 son las pag q deben existir con users
+			$pagActual = 0;
+			$mens = "no seas canalla!!!";
+			$color = "rojo";
+		} else {
 		$pagActual = $_GET['pagIr'];
+		}
 	} else {
 		$pagActual = 0;
 	}
@@ -28,6 +36,13 @@
   $vacio = true; //variable para ver si hay o no algun usuario, si no lo hay es 'true' y si lo hay es 'false'
   if (count($arrayUsers) > 0) {
   	$vacio = false;
+  } else {
+  	//hacer algo para que no pase pagina, podria ser pasar a la pag 1 de nuevo??? u ocultar el boton de NextPag
+  	//$pagActual = $pagActual - 1;
+  }
+
+  if ($pagActual == 0) {
+  	//ocultar el boton de <<<pagPrev
   }
 	mysqli_close($con); // desconectar
 

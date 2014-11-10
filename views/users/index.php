@@ -51,14 +51,14 @@
 		<div class="col-xs-4 col-xs-offset-1 col-sm-2 col-sm-offset-3 col-md-2 col-md-offset-3 col-lg-2 col-lg-offset-3">
 			<?php 
 				//echo "<a class='btn btn-warning center-block' id='prevPag' onclick='prevPag()'>&lt;&lt;&lt;PrevPag</a>";
-				echo "<a class='btn btn-warning center-block' href='../controllers/users_controller.php?pagIr=" . ($pagActual-1) . "'>&lt;&lt;&lt;PrevPag</a>";
+				echo "<a class='btn btn-warning center-block' href='../controllers/users_controller.php?pagIr=" . ($pagActual-1) . "'><<< Pag-</a>";
 			?>
 			<!--<button type="button" class="btn btn-warning center-block" id="prevPag">&lt;&lt;&lt;PrevPag</button>-->
 		</div>
-		<div class="col-lg-2 centra"><?php echo "pag " . ($pagActual+1); ?></div>
-		<div class="col-lg-2">
+		<div class="col-xs-1 col-sm-2 col-md-2 col-lg-2 centra"><?php echo "pag " . ($pagActual+1); ?></div>
+		<div class="col-xs-4 col-sm-2 col-md-2 col-lg-2">
 			<?php 
-				echo "<a class='btn btn-warning center-block' href='../controllers/users_controller.php?pagIr=" . ($pagActual+1) . "'>NextPag&gt;&gt;&gt;</a>";
+				echo "<a class='btn btn-warning center-block' href='../controllers/users_controller.php?pagIr=" . ($pagActual+1) . "'>Pag+ >>></a>";
 			?>
 			<!--<button type="button" class="btn btn-warning center-block" id="nextPag">NextPag&gt;&gt;&gt;</button>-->
 		</div>
