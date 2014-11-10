@@ -70,3 +70,27 @@ body {
   border-top-width: 4px;
   border-radius: 60px 60px 0px 0px;
 }
+
+.pagMenos {
+  border-width: 0px 0px 0px 8px;
+  border-radius: 60px 0px 0px 60px;
+}
+
+.pagMas {
+  
+  border-width: 0px 8px 0px 0px;
+  border-radius: 0px 60px 60px 0px;
+}
+
+.btn-default { 
+  background-color: #62c462;
+  border-color: #62c462;
+}
+
+.btn-default:hover {
+  background-color: #72CA72;
+  border-color: #2E9C53;
+}
+
+#72CA72
+#81D081

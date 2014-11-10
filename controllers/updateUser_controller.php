@@ -10,17 +10,17 @@
 	$view = "users/index.php";
 
 	// capturamos posibles errores en el array 'errors'
-	$errors = [];
-	if (empty($name)){
+	$errors = []; //donde vamos a meter los errores en forma de strings
+	if (empty($name)){ //si no hay $name metemos en $errors el string q notifica del error
 	array_push($errors,"- el campo <strong><ins>nombre</ins></strong> no es correcto<br>");
 	}
-	if (empty($ap1)){
+	if (empty($ap1)){ //si no hay $ap1 metemos en $errors el string q notifica del error
 	array_push($errors,"- el campo <strong><ins>apellido1</ins></strong> no es correcto<br>");
 	}
-	if (empty($ap2)){
+	if (empty($ap2)){ //si no hay $ap2 metemos en $errors el string q notifica del error
 	array_push($errors,"- el campo <strong><ins>apellido2</ins></strong> no es correcto<br>");
 	}
-	if (empty($fecha)){
+	if (empty($fecha)){ //si no hay $fecha metemos en $errors el string q notifica del error
 	array_push($errors,"- el campo <strong><ins>fecha de nacimiento</ins></strong> no es correcto<br>");
 	}
 
@@ -32,7 +32,7 @@
 		//notificamos
 		$mens = "User editado con éxito!!!";
 		$color = "verde";
-		include "../controllers/users_controller.php";
+		include "../controllers/users_controller.php"; //y vamos para el index
 	} else {
 	  // notifico errores
   	$mens = implode(" ", $errors); //meto en el string mens el array errors separado por espacios

@@ -45,25 +45,19 @@
 	</div><br>
 
 	<!-- 	BOTONES de paginación -->
-
-
 	<div class="row">
 		<div class="col-xs-4 col-xs-offset-1 col-sm-2 col-sm-offset-3 col-md-2 col-md-offset-3 col-lg-2 col-lg-offset-3">
 			<?php 
-				//echo "<a class='btn btn-warning center-block' id='prevPag' onclick='prevPag()'>&lt;&lt;&lt;PrevPag</a>";
-				echo "<a class='btn btn-warning center-block' href='../controllers/users_controller.php?pagIr=" . ($pagActual-1) . "'><<< Pag-</a>";
+				echo "<a class='btn btn-default center-block pagMenos' href='../controllers/users_controller.php?pagIr=" . ($pagActual-1) . "'><<< Pag-</a>";
 			?>
-			<!--<button type="button" class="btn btn-warning center-block" id="prevPag">&lt;&lt;&lt;PrevPag</button>-->
 		</div>
 		<div class="col-xs-1 col-sm-2 col-md-2 col-lg-2 centra"><?php echo "pag " . ($pagActual+1); ?></div>
 		<div class="col-xs-4 col-sm-2 col-md-2 col-lg-2">
 			<?php 
-				echo "<a class='btn btn-warning center-block' href='../controllers/users_controller.php?pagIr=" . ($pagActual+1) . "'>Pag+ >>></a>";
+				echo "<a class='btn btn-default center-block pagMas' href='../controllers/users_controller.php?pagIr=" . ($pagActual+1) . "'>Pag+ >>></a>";
 			?>
-			<!--<button type="button" class="btn btn-warning center-block" id="nextPag">NextPag&gt;&gt;&gt;</button>-->
 		</div>
-	</div><br>
-	
+	</div><br>	
 </div><br><br><br><br><br>
 
 <!-- Otra forma para el <li> de hijos, seguidos uno del otro con ", " pero el último tiene tambien ", "
