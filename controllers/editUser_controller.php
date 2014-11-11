@@ -3,7 +3,7 @@
 	include "../conectarBD.php";
 	$view = "users/edit.php";
 	$ruta = "updateUser_controller.php";
-	if (isset($_GET['userID'])){
+	if (isset($_GET['userID'])){//si no viene en el GET q el userID sea el mismo q había
 		$userID = $_GET['userID']; //enviar este parametro sin mostrarlo en el formulario
 	}
 	$result = mysqli_query($con,"SELECT id, nombre, ap1, ap2, fechaNac FROM users WHERE id = $userID");
