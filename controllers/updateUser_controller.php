@@ -7,7 +7,7 @@
 	$ap2 = $_POST['ap2'];
 	$fecha = $_POST['fechaNac'];
 
-	$view = "users/index.php";
+	$view = "users/index.php";//incluyo lo q será la vista en el layout
 
 	// capturamos posibles errores en el array 'errors'
 	$errors = []; //donde vamos a meter los errores en forma de strings

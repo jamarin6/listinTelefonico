@@ -1,12 +1,12 @@
 <?php
 	include "../conectarBD.php";
-	$view = "listNums/edit.php";
+	$view = "listNums/edit.php";//incluyo la vista q se mostrará en el layout
 	$ruta = "updateNumList_controller.php";
 	if (isset($_GET['phoneID'])){//si no viene en el GET que el phoneID sea el q había
-		$phoneID = $_GET['phoneID']; //enviar este parametro sin mostrarlo en el formulario
+		$phoneID = $_GET['phoneID']; //enviar este parametro sin mostrarlo en el formulario edit de despues
 	}
 	if (isset($_GET['userID'])){//si no viene en el GET que el userID sea el q había
-		$userID = $_GET['userID']; //enviar este parametro sin mostrarlo en el formulario
+		$userID = $_GET['userID']; //enviar este parametro sin mostrarlo en el formulario edit de despues
 	}
 	$result = mysqli_query($con,"SELECT id, nombre, numTlf, user_id FROM listnums WHERE id = $phoneID");
 	while($row = mysqli_fetch_array($result)){ // se mete en la posición [0] los valores del numList a mostrar

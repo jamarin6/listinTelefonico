@@ -31,11 +31,7 @@
 		  $numUsers = mysqli_fetch_array(mysqli_query($con,"SELECT count(*) FROM users"))[0];
 		  if ($numUsers == 0){
 		  	//entonces es el usuario raiz el que se va a crear xq es el 1º d todos
-		  	//$padreId = NULL; por si hay q pasar parametro $padreId,xo si no es necesario q no se pase y ponga Null
-		  	//crear SuperUser, con funcion, algo así --> createUser($name,$ap1,$ap2,$fecha,$padreId);
-		  	//notificar creacion SuperUser, o en el mens de notificacion recibir la variable $mens = "SuperUser creado";
-		  	//          o algo así, para q no sea un mensaje normal de user creado.
-		  	$padreOk = true; //hacer un insert solo, llamarle mediante una funcion, asi no se hacen 2 insert
+		  	$padreOk = true; //
 		  } else {
 		  	//algo falla porque hay users y no me mandan padreID
 		  	//volver a mostrar formulario con notificaciones de error
@@ -74,17 +70,11 @@
 	  // notifico errores
   	$mens = implode(" ", $errors); //meto en el string mens el array errors separado por espacios
   	$color = "rojo";
-  	// mandar al formulario new
-  	//include "../views/users/new.php";
-  	//mirar para cambiar el header siguiente por un include, pero q pare ahí para q el siguiente include no se ejecute
-  	//algo como: include "../controllers/newUser_controller.php"; y STOP xa q no me imprima el index de users_controller.php
-  	//nota: habría q actualizar la variable padreId q me llega a userID....--> $userID = $padreId
-  	//header("Location: newUser_controller.php?userID=" . $padreId . "&mens=" . $mens . "&color=" . $color);
   	if (isset($_POST['padreID'])){
   		$userID = $_POST['padreID'];//para q newUser_controller.php tenga visible $userID xq se llegará a newUser_controller
   	}                             // sin click, asi q en newUser no podrá coger nada de $_GET['userID']
+  	// mandar al formulario new
   	include "newUser_controller.php";
-  	//include -> newUser_controller.php
 	}
 ?>
 

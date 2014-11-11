@@ -20,9 +20,4 @@
 	}
 	//include  "../controllers/showUserList_controller.php";
 	include  "../views/listNums/deleteNum.php";
-	
-	//redirigir al users_index.php
-	//header("Location: showUserList_controller.php?id=" . $userID . "&mens=" . $mens . "&color=" . $color);
-	//$_GET['id']=$_GET['userID'];//le digo q el 'id' es el del user,'userID'(q es el q se espera y no el phoneID q es el q llega aqui),
-															//xq si no se confunde con el del phoneID en la siguiente parte CAMBIAR NOMBRES DE IDs
 ?>
