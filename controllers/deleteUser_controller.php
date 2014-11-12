@@ -1,6 +1,6 @@
 <?php
 	include "../conectarBD.php";
-	$userID = $_POST['userID']; //recibo el id del user a borrar
+	$userID = $_POST['userID']; //recibo el id del user a borrar q recibo por AJAX
 	
 	//cuento los users que hay y los meto en count1
 	$count1 = mysqli_fetch_array(mysqli_query($con,"SELECT count(*) FROM users"))[0];
@@ -18,7 +18,6 @@
 	  $mens = "Usuario Borrado con éxtio!!!";
 		$color = "verde";
 	}
-	//redirigir al users_index.php
 	//header("Location: users_controller.php?mens=" . $mens1);
 
 	include "../views/users/deleteUser.php";

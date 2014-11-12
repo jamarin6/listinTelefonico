@@ -1,4 +1,3 @@
- <!-- Esto tiene que ir en la accion edit de users_controller -->
 <?php
 	include "../conectarBD.php";
 	$view = "users/edit.php";//incluyo la vista q se mostrará en el layout

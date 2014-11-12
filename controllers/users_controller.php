@@ -36,54 +36,8 @@
   if (count($arrayUsers) > 0) {
   	$vacio = false;
   }
-  //para saber si al hacer click tiene q OCULTAR EL BOTON de paginacion
-	//$ultimoEnEsaPag = $inicio + 2; //es el elemento último users de cada pag ya q hay 3 por página
-  //$ocultar1 = false;
-  //$ocultar2 = false;
-  //if ($pagActual == 0) { //sería la 1ªpag //ocultar el boton de Pag-
-  //	$ocultar1 = true;
-  //}
-  //if (($count1+1) == $ultimoEnEsaPag) { //sería la última pag //ocultar el boton de Pag+
-  //	$ocultar2 = true;
-  //}
 
 	mysqli_close($con); // desconectar
 
 	include "../views/layout.php"; //incluyo en layout, donde entre otras cosas se genera la vista q quiero ($view)
-	// }
-
-  // fin action index //////////////////////////////////////////////////////////////////////
-
-
-
-	// function show (userID) {
-	//
-	//
-	//	
-	//}
-
-	// function new (userID) {
-	//
-	//
-	//	
-	//}
-
-	// function create (userID) {
-	//
-	//
-	//	
-	//}
-
-	// function edit (userID) {
-	//
-	//
-	//	
-	//}
-
-	// function update (userID) {
-	//
-	//
-	//	
-	//}
-
 ?>

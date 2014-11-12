@@ -1,7 +1,4 @@
 <?php 
-	// action index //////////////////////////////////////////////////////////////////////////
-
-	// function index() {
 	include "../conectarBD.php";
 	$view = "listNums/index.php";//incluyo la vista q se mostrará en el layout
 	$userList = mysqli_query($con,"SELECT * FROM listNums");//selecciono todos los contactos existentes de todos los users
